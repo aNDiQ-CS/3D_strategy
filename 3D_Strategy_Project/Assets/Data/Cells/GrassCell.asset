@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a767fb731255af41a269ce3fb905b8d, type: 3}
+  m_Name: GrassCell
+  m_EditorClassIdentifier: Assembly-CSharp::CellData
+  m_cellPrefab: {fileID: 5376330125639686786, guid: 2b7d22198193b204999ec05d3d0b4126, type: 3}
+  m_selectedCellPrefab: {fileID: 0}
+  m_isWalkable: 1
+  m_movementCost: 1
