@@ -165,10 +165,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UnitSelection
   m_outline: {fileID: 358346156}
-  m_hoverOutlineWidth: 5
+  m_hoverOutlineWidth: 10
   m_hoverOutlineColor: {r: 0.41320753, g: 1, b: 0.9177912, a: 1}
   m_selectOutlineWidth: 10
-  m_selectOutlineColor: {r: 0, g: 1, b: 0.11997676, a: 1}
+  m_selectOutlineColor: {r: 0, g: 1, b: 0.011714458, a: 1}
 --- !u!114 &358346156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,10 +362,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UnitSelection
   m_outline: {fileID: 806756416}
-  m_hoverOutlineWidth: 5
+  m_hoverOutlineWidth: 10
   m_hoverOutlineColor: {r: 0.41320753, g: 1, b: 0.9177912, a: 1}
   m_selectOutlineWidth: 10
-  m_selectOutlineColor: {r: 0, g: 1, b: 0.11997676, a: 1}
+  m_selectOutlineColor: {r: 0, g: 1, b: 0.011714458, a: 1}
 --- !u!114 &806756416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -764,10 +764,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UnitSelection
   m_outline: {fileID: 1195898436}
-  m_hoverOutlineWidth: 5
+  m_hoverOutlineWidth: 10
   m_hoverOutlineColor: {r: 0.41320753, g: 1, b: 0.9177912, a: 1}
   m_selectOutlineWidth: 10
-  m_selectOutlineColor: {r: 0, g: 1, b: 0.11997676, a: 1}
+  m_selectOutlineColor: {r: 0, g: 1, b: 0.011714458, a: 1}
 --- !u!114 &1195898439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -828,10 +828,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UnitSelection
   m_outline: {fileID: 1218826767}
-  m_hoverOutlineWidth: 5
+  m_hoverOutlineWidth: 10
   m_hoverOutlineColor: {r: 0.41320753, g: 1, b: 0.9177912, a: 1}
   m_selectOutlineWidth: 10
-  m_selectOutlineColor: {r: 0, g: 1, b: 0.11997676, a: 1}
+  m_selectOutlineColor: {r: 0, g: 1, b: 0.011714458, a: 1}
 --- !u!114 &1218826767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1295,10 +1295,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UnitSelection
   m_outline: {fileID: 2023354335}
-  m_hoverOutlineWidth: 5
+  m_hoverOutlineWidth: 10
   m_hoverOutlineColor: {r: 0.41320753, g: 1, b: 0.9177912, a: 1}
   m_selectOutlineWidth: 10
-  m_selectOutlineColor: {r: 0, g: 1, b: 0.11997676, a: 1}
+  m_selectOutlineColor: {r: 0, g: 1, b: 0.011714458, a: 1}
 --- !u!114 &2023354335
 MonoBehaviour:
   m_ObjectHideFlags: 0

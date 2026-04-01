@@ -12,9 +12,6 @@ public class UnitSelection : MonoBehaviour
     [SerializeField][Range(0f, 10f)] private float m_selectOutlineWidth;
     [SerializeField] private Color m_selectOutlineColor;
 
-    private bool m_isSelected;
-    public bool IsSelected => m_isSelected;
-
     private void Awake()
     {
         m_outline.OutlineWidth = 0f;
@@ -22,31 +19,25 @@ public class UnitSelection : MonoBehaviour
 
     public void OnHoverEnter()
     {
-        if (!m_isSelected)
-        {
-            m_outline.OutlineColor = m_hoverOutlineColor;
-            m_outline.OutlineWidth = m_hoverOutlineWidth;
-        }        
+        m_outline.OutlineWidth = m_hoverOutlineWidth;
+        m_outline.OutlineColor = m_hoverOutlineColor;
     }
+
+    // TODO: Объединить методы OnHoverExit и OnDeselect в один метод
 
     public void OnHoverExit()
     {
-        if (!m_isSelected)
-        {
-            m_outline.OutlineWidth = 0f;
-        }
+        m_outline.OutlineWidth = 0f;
     }
 
     public void OnSelect()
     {
-        m_isSelected = true;
-        m_outline.OutlineColor = m_selectOutlineColor;
         m_outline.OutlineWidth = m_selectOutlineWidth;
-    }    
+        m_outline.OutlineColor = m_selectOutlineColor;
+    }
 
     public void OnDeselect()
     {
-        m_isSelected = false;
         m_outline.OutlineWidth = 0f;
     }
 }

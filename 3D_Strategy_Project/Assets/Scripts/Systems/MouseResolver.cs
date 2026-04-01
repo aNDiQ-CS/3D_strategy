@@ -9,42 +9,32 @@ public class MouseResolver : MonoBehaviour
     public event Action<ISelectable> OnSelect;
     public event Action<ISelectable> OnDeselect;
 
-    private ISelectable m_lastHoveredObject;
-    private ISelectable m_lastSelectableObject;
+    private ISelectable m_lastHovered;
+    private ISelectable m_lastSelected;
 
     void Update()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
-            //Debug.Log("Hit smth");            
-            //if (hit.transform.TryGetComponent(out ISelectable selectable))
-            //{
-            //    Debug.Log(selectable);
-            //    OnHoverEnter?.Invoke(selectable);
-            //}
-
             ISelectable selectable = hit.transform.GetComponentInParent<ISelectable>();
-
-            if (selectable != m_lastHoveredObject)
-            {
-                OnHoverEnter?.Invoke(selectable);
-                OnHoverExit?.Invoke(m_lastHoveredObject);
-                m_lastHoveredObject = selectable;
-            }            
             OnHoverEnter?.Invoke(selectable);
-
-            if (Input.GetMouseButtonDown(0))
+            if (selectable != m_lastHovered)
             {
-                OnSelect?.Invoke(selectable);
-                OnDeselect?.Invoke(m_lastSelectableObject);
-                m_lastSelectableObject = selectable;
+                OnHoverExit?.Invoke(m_lastHovered);
+                m_lastHovered = selectable;
+            }
+
+            if (Input.GetMouseButtonDown(0) && selectable != m_lastSelected)
+            {
+                OnDeselect?.Invoke(m_lastSelected);
+                OnSelect?.Invoke(selectable);                
+                m_lastSelected = selectable;
             }
         }
         else
         {
-            OnHoverExit?.Invoke(m_lastHoveredObject);
-            m_lastHoveredObject = null;
-        }
+            OnHoverExit?.Invoke(m_lastHovered);
+        }        
     }
 }
