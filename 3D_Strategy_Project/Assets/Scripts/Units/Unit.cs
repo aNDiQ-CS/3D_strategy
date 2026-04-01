@@ -8,6 +8,9 @@ public class Unit : MonoBehaviour, ISelectable
     private void OnEnable()
     {
         m_mouseResolver.OnHoverEnter += OnHoverEnter;
+        m_mouseResolver.OnHoverExit += OnHoverExit;
+        m_mouseResolver.OnSelect += OnSelect;
+        m_mouseResolver.OnDeselect += OnDeselect;
     }
 
     public void OnHoverEnter(ISelectable selectable)
@@ -18,13 +21,27 @@ public class Unit : MonoBehaviour, ISelectable
         }
     }
 
-    public void OnHoverExit()
+    public void OnHoverExit(ISelectable selectable)
     {
-        throw new System.NotImplementedException();
+        if (Equals(selectable))
+        {
+            m_unitSelection.OnHoverExit();
+        }
+    }    
+
+    public void OnSelect(ISelectable selectable)
+    {
+        if (Equals(selectable))
+        {
+            m_unitSelection.OnSelect();
+        }
     }
 
-    public void OnSelect()
+    public void OnDeselect(ISelectable selectable)
     {
-        throw new System.NotImplementedException();
-    }    
+        if (Equals(selectable))
+        {
+            m_unitSelection.OnDeselect();
+        }
+    }
 }
