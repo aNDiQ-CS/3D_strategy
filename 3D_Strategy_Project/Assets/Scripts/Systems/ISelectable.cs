@@ -3,6 +3,7 @@ using UnityEngine;
 public interface ISelectable
 {
     public void OnHoverEnter(ISelectable selectable);
-    public void OnHoverExit();
-    public void OnSelect();
+    public void OnHoverExit(ISelectable selectable);
+    public void OnSelect(ISelectable selectable);
+    public void OnDeselect(ISelectable selectable);
 }
