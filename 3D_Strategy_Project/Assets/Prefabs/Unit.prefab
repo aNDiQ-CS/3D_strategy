@@ -136,55 +136,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!1 &4172535213161962631
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1993283952828758406}
-  - component: {fileID: 4514098040314275927}
-  m_Layer: 0
-  m_Name: UI Controller
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1993283952828758406
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4172535213161962631}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 7070562338899502437}
-  m_Father: {fileID: 5314325531052230575}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4514098040314275927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4172535213161962631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd170f0330200d64ca955bc37e4c0f3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HoverUnitNameController
-  m_mouseResolver: {fileID: 5382468066561927202, guid: c5b6500775ed5354e81af204b82a7878, type: 3}
-  m_hoverUnitPanel: {fileID: 4483428073400252010}
-  m_parentUnit: {fileID: 8759525436717341678}
-  m_unitNameText: {fileID: 7171964338834178338}
 --- !u!1 &4483428073400252010
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,7 +149,7 @@ GameObject:
   - component: {fileID: 7869935825717155617}
   - component: {fileID: 3654623830502138721}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UnitNameCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -217,7 +168,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2758548474753015931}
-  m_Father: {fileID: 1993283952828758406}
+  m_Father: {fileID: 5314325531052230575}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -412,6 +363,7 @@ GameObject:
   - component: {fileID: 211311767160653622}
   - component: {fileID: 667771476516556070}
   - component: {fileID: 5162998877177104106}
+  - component: {fileID: 6288623695210473153}
   m_Layer: 0
   m_Name: Unit
   m_TagString: Untagged
@@ -433,7 +385,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7772206371743019395}
-  - {fileID: 1993283952828758406}
+  - {fileID: 7070562338899502437}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &211311767160653622
@@ -485,3 +437,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Unit
   m_mouseResolver: {fileID: 0}
   m_unitSelection: {fileID: 667771476516556070}
+  m_unitNameController: {fileID: 6288623695210473153}
+--- !u!114 &6288623695210473153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8759525436717341678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd170f0330200d64ca955bc37e4c0f3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverUnitNameController
+  m_hoverUnitPanel: {fileID: 4483428073400252010}
+  m_parentUnit: {fileID: 8759525436717341678}
+  m_unitNameText: {fileID: 7171964338834178338}

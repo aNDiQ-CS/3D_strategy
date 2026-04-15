@@ -4,6 +4,7 @@ public class Unit : MonoBehaviour, ISelectable
 {
     [SerializeField] private MouseResolver m_mouseResolver;
     [SerializeField] private UnitSelection m_unitSelection;
+    [SerializeField] private HoverUnitNameController m_unitNameController;
 
     private bool m_isSelected = false;
 
@@ -23,6 +24,7 @@ public class Unit : MonoBehaviour, ISelectable
         if (this.Equals(selectable) && !m_isSelected)
         {
             m_unitSelection.OnHoverEnter();
+            m_unitNameController.ShowPanel();
         }
     }
 
@@ -31,6 +33,7 @@ public class Unit : MonoBehaviour, ISelectable
         if (this.Equals(selectable) && !m_isSelected)
         {
             m_unitSelection.OnHoverExit();
+            m_unitNameController.HidePanel();
         }
     }
 
@@ -48,6 +51,7 @@ public class Unit : MonoBehaviour, ISelectable
         if (this.Equals(selectable))
         {
             m_unitSelection.OnDeselect();
+            m_unitNameController.HidePanel();
             m_isSelected = false;
         }
     }
